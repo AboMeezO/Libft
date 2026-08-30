@@ -5,7 +5,7 @@ int isalnum(int c)
     return (0);
 }
 
-///*
+/*
 #include <stdio.h>
 
 int main(int argc, char **argv)
@@ -18,4 +18,4 @@ int main(int argc, char **argv)
         printf("The character is not alphanumeric.\n");
     return (0);
 }
-//*/
+*/
