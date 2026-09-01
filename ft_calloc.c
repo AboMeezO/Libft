@@ -11,10 +11,14 @@ void	*ft_calloc(size_t n, size_t size)
 		return (NULL);
 	total_size = n * size;
 	ptr = malloc(total_size);
+	index = 0;
 	if (ptr)
 	{
-		for (index = 0; index < total_size; index++)
+		while (index < total_size)
+		{
 			((char *)ptr)[index] = 0;
+			index++;
+		}
 	}
 	return (ptr);
 }

@@ -3,12 +3,15 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*p;
+	size_t			index;
 
 	p = (unsigned char *)s;
-	size_t i;
-
-	for (i = 0; i < n; i++)
-		p[i] = (unsigned char)c;
+	index = 0;
+	while (index < n)
+	{
+		p[index] = (unsigned char)c;
+		index++;
+	}
 	return (s);
 }
 /*

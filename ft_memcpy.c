@@ -2,12 +2,12 @@
 
 void	*memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	index;
+	size_t				index;
+	unsigned char		*d;
+	const unsigned char	*s;
 
 	index = 0;
-	unsigned char *d;
 	d = (unsigned char *)dest;
-	const unsigned char *s;
 	s = (const unsigned char *)src;
 	while (index < n)
 	{

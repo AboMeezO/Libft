@@ -2,12 +2,11 @@
 
 void	*memmove(void *dest, const void *src, size_t n)
 {
-	size_t			index;
-
-	unsigned char	*d;
+	size_t				index;
+	unsigned char		*d;
+	const unsigned char	*s;
 
 	d = (unsigned char *)dest;
-	const unsigned char *s;
 	s = (const unsigned char *)src;
 	if (d < s)
 	{
