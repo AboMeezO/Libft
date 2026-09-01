@@ -15,7 +15,6 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 			&& to_find[inner_index]
 			&& outer_index + inner_index < len
 			&& str[outer_index + inner_index] == to_find[inner_index])
-            
 			inner_index++;
 		if (to_find[inner_index] == '\0')
 			return ((char *)&str[outer_index]);

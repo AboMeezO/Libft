@@ -3,8 +3,8 @@
 int	ft_atoi(const char *str)
 {
 	size_t	index;
-	int	sign;
-	int	number;
+	int		sign;
+	int		number;
 
 	index = 0;
 	sign = 1;
