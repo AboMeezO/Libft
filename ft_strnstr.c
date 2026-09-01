@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/01 22:30:43 by username          #+#    #+#             */
+/*   Updated: 2026/09/01 22:30:43 by marvin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stddef.h>
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
@@ -7,17 +19,17 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 
 	outer_index = 0;
 	if (to_find[0] == '\0')
-		return ((char *)str);
+		return ((char *) str);
 	while (str[outer_index] && outer_index < len)
 	{
 		inner_index = 0;
 		while (str[outer_index + inner_index]
 			&& to_find[inner_index]
-			&& outer_index + inner_index < len
-			&& str[outer_index + inner_index] == to_find[inner_index])
-			inner_index++;
+		&& outer_index + inner_index < len
+		&& str[outer_index + inner_index] == to_find[inner_index])
+		inner_index++;
 		if (to_find[inner_index] == '\0')
-			return ((char *)&str[outer_index]);
+			return ((char *) & str[outer_index]);
 		outer_index++;
 	}
 	return (NULL);
