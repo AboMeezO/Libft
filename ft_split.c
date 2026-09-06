@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohammah <mohammad.mahmoud@learner.42.t    +#+  +:+       +#+        */
+/*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 23:51:49 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/03 01:22:11 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/06 20:36:13 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,24 +90,3 @@ char	**ft_split(char *str, char c)
 	result[index_word] = 0;
 	return (result);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char	**result;
-	int		index;
-
-	result = ft_split("But, all of that was!!ripped 
-        .apart ,when you refused to fight", ' ');
-	index = 0;
-	while (result[index])
-	{
-		printf("[%s]\n", result[index]);
-		free(result[index]);
-		index++;
-	}
-	free(result);
-	return (0);
-}
-*/
