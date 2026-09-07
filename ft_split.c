@@ -6,13 +6,13 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 23:51:49 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/07 13:27:31 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/07 14:25:22 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	count_words(const char *str, char c)
+static int	count_words(char *str, char c)
 {
 	int	index;
 	int	count;
@@ -35,7 +35,7 @@ int	count_words(const char *str, char c)
 	return (count);
 }
 
-int	get_word_length(char *str, int start, char c)
+static int	get_word_length(char *str, int start, char c)
 {
 	int	length;
 
@@ -46,7 +46,7 @@ int	get_word_length(char *str, int start, char c)
 	return (length);
 }
 
-char	*copy_word(char *str, int start, int length)
+static char	*copy_word(char *str, int start, int length)
 {
 	int		index;
 	char	*word;
@@ -62,7 +62,7 @@ char	*copy_word(char *str, int start, int length)
 	return (word);
 }
 
-char	**ft_split(char *str, char c)
+char	**ft_split(const char *str, char c)
 {
 	char	**result;
 	int		words_count;
