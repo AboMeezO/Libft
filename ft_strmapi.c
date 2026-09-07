@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohammah <mohammad.mahmoud@learner.42.t    +#+  +:+       +#+        */
+/*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/03 20:05:55 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/03 20:05:55 by mohammah         ###   ########.fr       */
+/*   Created: 2026/09/08 00:54:37 by mohammah          #+#    #+#             */
+/*   Updated: 2026/09/08 00:54:37 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	res[index] = '\0';
 	return (res);
 }
-
-/*
-char to_upper(unsigned int n, char c)
-{
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
-}
-
-#include <stdio.h>
-int main (int ac, char **av)
-{
-	if (ac < 2)
-	{
-		printf("u fucking nigger u need one arg at lease!!!");
-		return (0);
-	}
-	char *res = ft_strmapi(av[1], to_upper);
-	printf("%s", res);
-}
-*/
