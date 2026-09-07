@@ -6,13 +6,14 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 23:51:49 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/07 14:25:22 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/08 00:43:59 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-static int	count_words(char *str, char c)
+static int	count_words(const char *str, char c)
 {
 	int	index;
 	int	count;
@@ -35,58 +36,64 @@ static int	count_words(char *str, char c)
 	return (count);
 }
 
-static int	get_word_length(char *str, int start, char c)
+static int	get_word_length(const char *str, int start, char c)
 {
 	int	length;
 
 	length = 0;
-	while (str[start + length]
-		&& !(str[start + length] == c))
+	while (str[start + length] && str[start + length] != c)
 		length++;
 	return (length);
 }
 
-static char	*copy_word(char *str, int start, int length)
+static void	free_words(char **result, int count)
 {
-	int		index;
-	char	*word;
-
-	word = malloc(sizeof(char) * (length + 1));
-	index = 0;
-	while (index < length)
+	while (count > 0)
 	{
-		word[index] = str[start + index];
-		index++;
+		count--;
+		free(result[count]);
 	}
-	word[index] = '\0';
-	return (word);
+	free(result);
 }
 
-char	**ft_split(const char *str, char c)
+static int	fill_result(char **result, const char *str, char c)
+{
+	int	index;
+	int	word;
+	int	length;
+
+	index = 0;
+	word = 0;
+	while (str[index])
+	{
+		while (str[index] && str[index] == c)
+			index++;
+		if (!str[index])
+			break ;
+		length = get_word_length(str, index, c);
+		result[word] = ft_substr(str, index, length);
+		if (!result[word])
+			return (0);
+		word++;
+		index += length;
+	}
+	result[word] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *str, char c)
 {
 	char	**result;
-	int		words_count;
-	int		index_string;
-	int		index_word;
-	int		length;
+	int		words;
 
-	words_count = count_words(str, c);
-	result = malloc(sizeof(char *) * (words_count + 1));
+	words = count_words(str, c);
+	result = malloc(sizeof(char *) * (words + 1));
 	if (!result)
-		return (0);
-	index_string = 0;
-	index_word = 0;
-	while (str[index_string])
+		return (NULL);
+	if (!fill_result(result, str, c))
 	{
-		while (str[index_string] && (str[index_string] == c))
-			index_string++;
-		if (!str[index_string])
-			break ;
-		length = get_word_length(str, index_string, c);
-		result[index_word] = copy_word(str, index_string, length);
-		index_word++;
-		index_string += length;
+		free_words(result, words);
+		return (NULL);
 	}
-	result[index_word] = 0;
 	return (result);
 }
