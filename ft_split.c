@@ -6,13 +6,13 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 23:51:49 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/06 20:36:13 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/07 13:27:31 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	count_words(char *str, char c)
+int	count_words(const char *str, char c)
 {
 	int	index;
 	int	count;
