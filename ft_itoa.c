@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohammah <mohammad.mahmoud@learner.42.t    +#+  +:+       +#+        */
+/*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 15:45:43 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/03 17:09:34 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/07 13:52:41 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	count_length(int number)
 	int	count;
 
 	count = 0;
-	if (number < 0)
+	if (number <= 0)
 		count++;
 	while (number)
 	{
