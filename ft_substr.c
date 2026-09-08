@@ -18,7 +18,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
 	size_t	index;
-	size_t	sub_len;
 
 	if (!s)
 		return (NULL);
