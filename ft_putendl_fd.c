@@ -6,7 +6,7 @@
 /*   By: mohammah <mohammad.mahmoud@learner.42.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/04 01:27:04 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/04 01:27:04 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/12 14:29:22 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	int		index;
 
+	if (!s)
+		return ;
 	index = 0;
 	while (s[index])
 	{

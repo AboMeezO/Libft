@@ -6,7 +6,7 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 14:54:05 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/12 14:15:50 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/12 14:26:59 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
-		return (NULL);
+		return ;
 	new->next = *lst;
 	*lst = new;
 }
