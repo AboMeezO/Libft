@@ -6,7 +6,7 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 01:24:15 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/08 00:29:26 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/12 14:21:56 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	int		index;
 
+	if (!s1)
+		return (NULL);
 	start = get_start(s1, set);
 	end = get_end(s1, set);
 	if (end < start)

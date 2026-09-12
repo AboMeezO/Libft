@@ -6,7 +6,7 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 19:57:25 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/06 20:04:00 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/12 14:16:56 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;
 
-	if (*lst == NULL)
+	if (!lst || !*lst)
 	{
 		*lst = new;
 		return ;

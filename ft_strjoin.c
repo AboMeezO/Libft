@@ -6,22 +6,13 @@
 /*   By: mohammah <mohammad.mahmoud@learner.42.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 23:38:12 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/01 23:38:12 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/12 14:21:25 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdlib.h>
-
-static unsigned int	ft_strlen(const char *str)
-{
-	unsigned int	len;
-
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
-}
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -30,6 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	unsigned int	i;
 	char			*res;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	res = malloc(sizeof(char) * (len1 + len2 + 1));

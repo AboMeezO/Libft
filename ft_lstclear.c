@@ -6,7 +6,7 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 20:27:46 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/06 20:34:55 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/12 14:19:46 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*current;
 	t_list	*temp;
 
+	if (!lst || !*lst)
+		return (NULL);
 	current = *lst;
 	while (current != NULL)
 	{

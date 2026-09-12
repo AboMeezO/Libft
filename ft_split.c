@@ -6,7 +6,7 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 23:51:49 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/08 00:43:59 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/12 14:20:54 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,8 @@ char	**ft_split(char const *str, char c)
 	char	**result;
 	int		words;
 
+	if (!str)
+		return (NULL);
 	words = count_words(str, c);
 	result = malloc(sizeof(char *) * (words + 1));
 	if (!result)

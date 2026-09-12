@@ -6,7 +6,7 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 20:39:26 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/06 20:41:45 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/12 14:20:20 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*current;
 
+	if (!lst)
+		return (NULL);
 	current = lst;
 	while (current != NULL)
 	{
