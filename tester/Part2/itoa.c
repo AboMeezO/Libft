@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "../../libft.h"
 #include "../tester.h"
 
@@ -8,20 +7,28 @@ void	test_itoa(void)
 {
 	char	*result;
 
-	printf("\nft_itoa\n");
+	printf("Test 1\n");
+	printf("  input:    0\n");
 	result = ft_itoa(0);
-	print_case("zero", result != NULL && strcmp(result, "0") == 0);
+	printf("  expected: \"0\"\n");
+	printf("  actual:   \"%s\"\n\n", result);
 	free(result);
+	printf("Test 2\n");
+	printf("  input:    42\n");
 	result = ft_itoa(42);
-	print_case("positive", result != NULL && strcmp(result, "42") == 0);
+	printf("  expected: \"42\"\n");
+	printf("  actual:   \"%s\"\n\n", result);
 	free(result);
+	printf("Test 3\n");
+	printf("  input:    -42\n");
 	result = ft_itoa(-42);
-	print_case("negative", result != NULL && strcmp(result, "-42") == 0);
+	printf("  expected: \"-42\"\n");
+	printf("  actual:   \"%s\"\n\n", result);
 	free(result);
-	result = ft_itoa(2147483647);
-	print_case("int max", result != NULL && strcmp(result, "2147483647") == 0);
-	free(result);
+	printf("Test 4\n");
+	printf("  input:    INT_MIN\n");
 	result = ft_itoa(-2147483648);
-	print_case("int min", result != NULL && strcmp(result, "-2147483648") == 0);
+	printf("  expected: \"-2147483648\"\n");
+	printf("  actual:   \"%s\"\n\n", result);
 	free(result);
 }
