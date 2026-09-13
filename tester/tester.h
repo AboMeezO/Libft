@@ -26,5 +26,11 @@ int	test_memcpy(void);
 int	test_memmove(void);
 int	test_memchr(void);
 int	test_memcmp(void);
+int	test_atoi(void);
+int	test_calloc(void);
+int	test_strlcpy(void);
+int	test_strlcat(void);
+int	test_strnstr(void);
+int	test_strdup(void);
 
 #endif
