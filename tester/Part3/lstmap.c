@@ -6,7 +6,12 @@
 
 static void	*duplicate_content(void *content)
 {
-	return (strdup((char *)content));
+	char	*copy;
+
+	copy = malloc(strlen(content) + 1);
+	if (copy)
+		strcpy(copy, content);
+	return (copy);
 }
 
 static void	delete_content(void *content)
