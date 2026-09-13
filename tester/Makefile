@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 LIBFT = ../libft.a
 
-SRC = main.c tests.c
+SRC = main.c common.c $(wildcard Part1/*.c) $(wildcard Part2/*.c) $(wildcard Part3/*.c)
 OBJ = $(SRC:.c=.o)
 
 all: $(LIBFT) $(NAME)
