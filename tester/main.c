@@ -77,6 +77,9 @@ static int	run_test(const char *name)
 		printf("\n%s: test not found\n", name);
 		return (0);
 	}
+	printf("\n========================================\n");
+	printf("%s\n", name);
+	printf("========================================\n\n");
 	test->run();
 	return (1);
 }
