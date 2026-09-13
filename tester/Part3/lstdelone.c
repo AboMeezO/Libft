@@ -10,10 +10,14 @@ static void	delete_content(void *content)
 
 void	test_lstdelone(void)
 {
+	char	*content;
 	t_list	*node;
 
 	printf("\nft_lstdelone\n");
-	node = ft_lstnew(strdup("hello"));
+	content = malloc(6);
+	if (content)
+		memcpy(content, "hello", 6);
+	node = ft_lstnew(content);
 	ft_lstdelone(node, delete_content);
 	print_case("node deleted", 1);
 }
