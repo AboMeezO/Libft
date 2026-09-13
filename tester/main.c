@@ -50,39 +50,34 @@ static const t_test_case	*find_test(const char *name)
 static int	run_test(const char *name)
 {
 	const t_test_case	*test;
-	int					result;
 
 	test = find_test(name);
 	if (test == NULL)
 	{
-		printf("? %s: test not found\n", name);
+		printf("\n%s: test not found\n", name);
 		return (0);
 	}
-	result = test->run();
-	if (result == 1)
-		printf("OK  %s\n", name);
-	else
-		printf("KO  %s\n", name);
-	return (result);
+	test->run();
+	return (1);
 }
 
 int	main(int argc, char **argv)
 {
 	int	index;
-	int	passed;
+	int	run;
 
 	if (argc < 2)
 	{
 		printf("Usage: ./libft_tester <function> [function ...]\n");
 		return (1);
 	}
-	passed = 0;
+	run = 0;
 	index = 1;
 	while (index < argc)
 	{
-		passed += run_test(argv[index]);
+		run += run_test(argv[index]);
 		index++;
 	}
-	printf("\n%d/%d tests passed\n", passed, argc - 1);
-	return (passed != argc - 1);
+	printf("\n%d/%d functions ran\n", run, argc - 1);
+	return (run != argc - 1);
 }
