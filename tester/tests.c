@@ -56,3 +56,91 @@ int	test_tolower(void)
 		&& ft_tolower('a') == 'a'
 		&& ft_tolower('1') == '1');
 }
+
+int	test_strlen(void)
+{
+	return (ft_strlen("") == 0
+		&& ft_strlen("hello") == 5
+		&& ft_strlen("hello world") == 11);
+}
+
+int	test_strchr(void)
+{
+	return (ft_strchr("hello", 'h') == &"hello"[0]
+		&& ft_strchr("hello", 'l') == &"hello"[2]
+		&& ft_strchr("hello", 'z') == NULL
+		&& ft_strchr("hello", '\0') == &"hello"[5]);
+}
+
+int	test_strrchr(void)
+{
+	return (ft_strrchr("hello", 'l') == &"hello"[3]
+		&& ft_strrchr("hello", 'h') == &"hello"[0]
+		&& ft_strrchr("hello", 'z') == NULL
+		&& ft_strrchr("hello", '\0') == &"hello"[5]);
+}
+
+int	test_strncmp(void)
+{
+	return (ft_strncmp("abc", "abc", 3) == 0
+		&& ft_strncmp("abc", "abd", 3) < 0
+		&& ft_strncmp("abd", "abc", 3) > 0
+		&& ft_strncmp("abc", "abd", 0) == 0
+		&& ft_strncmp("abc", "abcd", 4) < 0);
+}
+
+int	test_memset(void)
+{
+	char	buffer[6];
+
+	ft_memset(buffer, 'a', 5);
+	buffer[5] = '\0';
+	return (buffer[0] == 'a' && buffer[4] == 'a' && buffer[5] == '\0');
+}
+
+int	test_bzero(void)
+{
+	char	buffer[5];
+
+	buffer[0] = 'a';
+	buffer[1] = 'b';
+	buffer[2] = 'c';
+	buffer[3] = 'd';
+	buffer[4] = 'e';
+	ft_bzero(buffer, 5);
+	return (buffer[0] == 0 && buffer[4] == 0);
+}
+
+int	test_memcpy(void)
+{
+	char	src[] = "hello";
+	char	dst[6];
+
+	ft_memcpy(dst, src, 6);
+	return (strcmp(dst, "hello") == 0);
+}
+
+int	test_memmove(void)
+{
+	char	buffer[] = "123456";
+
+	ft_memmove(buffer + 2, buffer, 4);
+	return (strcmp(buffer, "121234") == 0);
+}
+
+int	test_memchr(void)
+{
+	char	buffer[] = "hello";
+
+	return (ft_memchr(buffer, 'e', 5) == buffer + 1
+		&& ft_memchr(buffer, 'z', 5) == NULL
+		&& ft_memchr(buffer, 'o', 2) == NULL);
+}
+
+int	test_memcmp(void)
+{
+	return (ft_memcmp("abc", "abc", 3) == 0
+		&& ft_memcmp("abc", "abd", 3) < 0
+		&& ft_memcmp("abd", "abc", 3) > 0
+		&& ft_memcmp("abc", "abd", 0) == 0);
+}
