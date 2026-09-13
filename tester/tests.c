@@ -1,5 +1,8 @@
 #include "../libft.h"
 #include "tester.h"
+#include <limits.h>
+#include <stdlib.h>
+#include <string.h>
 
 int	test_isalpha(void)
 {
@@ -143,4 +146,98 @@ int	test_memcmp(void)
 		&& ft_memcmp("abc", "abd", 3) < 0
 		&& ft_memcmp("abd", "abc", 3) > 0
 		&& ft_memcmp("abc", "abd", 0) == 0);
+}
+
+int	test_atoi(void)
+{
+	return (ft_atoi("0") == 0
+		&& ft_atoi("42") == 42
+		&& ft_atoi("-42") == -42
+		&& ft_atoi("+42") == 42
+		&& ft_atoi("   -42abc") == -42
+		&& ft_atoi("\t\n\v\f\r 123") == 123
+		&& ft_atoi("abc42") == 0
+		&& ft_atoi("--42") == 0);
+}
+
+int	test_calloc(void)
+{
+	int		*numbers;
+	void	*overflow;
+
+	numbers = ft_calloc(4, sizeof(int));
+	if (numbers == NULL)
+		return (0);
+	if (numbers[0] != 0 || numbers[1] != 0
+		|| numbers[2] != 0 || numbers[3] != 0)
+	{
+		free(numbers);
+		return (0);
+	}
+	free(numbers);
+	overflow = ft_calloc((size_t)-1, 2);
+	return (overflow == NULL);
+}
+
+int	test_strlcpy(void)
+{
+	char	dst[6];
+	char	small[4];
+	size_t	result;
+
+	result = ft_strlcpy(dst, "hello", sizeof(dst));
+	if (result != 5 || strcmp(dst, "hello") != 0)
+		return (0);
+	result = ft_strlcpy(small, "hello", sizeof(small));
+	return (result == 5 && strcmp(small, "hel") == 0);
+}
+
+int	test_strlcat(void)
+{
+	char	dst[10];
+	char	small[6];
+	size_t	result;
+
+	strcpy(dst, "hi");
+	result = ft_strlcat(dst, "hello", sizeof(dst));
+	if (result != 7 || strcmp(dst, "hihello") != 0)
+		return (0);
+	strcpy(small, "hi");
+	result = ft_strlcat(small, "hello", sizeof(small));
+	return (result == 7 && strcmp(small, "hihel") == 0);
+}
+
+int	test_strnstr(void)
+{
+	char	*result;
+
+	result = ft_strnstr("hello world", "world", 11);
+	if (result != ("hello world" + 6))
+		return (0);
+	if (ft_strnstr("hello world", "world", 5) != NULL)
+		return (0);
+	if (ft_strnstr("hello", "", 0) != NULL)
+		return (0);
+	return (ft_strnstr("hello", "", 5) == ("hello"));
+}
+
+int	test_strdup(void)
+{
+	char	*copy;
+
+	copy = ft_strdup("hello world");
+	if (copy == NULL)
+		return (0);
+	if (strcmp(copy, "hello world") != 0)
+	{
+		free(copy);
+		return (0);
+	}
+	if (copy == "hello world")
+	{
+		free(copy);
+		return (0);
+	}
+	free(copy);
+	return (1);
 }
