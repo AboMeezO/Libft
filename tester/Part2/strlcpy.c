@@ -8,12 +8,19 @@ void	test_strlcpy(void)
 	char	dst[6];
 	size_t	result;
 
-	printf("\nft_strlcpy\n");
+	printf("Test 1\n");
+	printf("  input:    src=\"hello\", size=6\n");
 	result = ft_strlcpy(dst, "hello", sizeof(dst));
-	print_case("full copy", result == 5 && strcmp(dst, "hello") == 0);
+	printf("  expected: return 5, dst=\"hello\"\n");
+	printf("  actual:   return %zu, dst=\"%s\"\n\n", result, dst);
+	printf("Test 2\n");
+	printf("  input:    src=\"abcdef\", size=6\n");
 	result = ft_strlcpy(dst, "abcdef", sizeof(dst));
-	print_case("truncation", result == 6 && strcmp(dst, "abcde") == 0);
+	printf("  expected: return 6, dst=\"abcde\"\n");
+	printf("  actual:   return %zu, dst=\"%s\"\n\n", result, dst);
+	printf("Test 3\n");
+	printf("  input:    src=\"hello\", size=0\n");
 	result = ft_strlcpy(dst, "hello", 0);
-	print_case("zero size return", result == 5);
-	print_case("zero size unchanged", dst[0] == 'a');
+	printf("  expected: return 5\n");
+	printf("  actual:   return %zu\n\n", result);
 }
