@@ -3,17 +3,16 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 LIBFT = ../libft.a
-
 SRC = main.c common.c $(wildcard Part1/*.c) $(wildcard Part2/*.c) $(wildcard Part3/*.c)
 OBJ = $(SRC:.c=.o)
 
-all: $(LIBFT) $(NAME)
+all: $(NAME)
+
+$(NAME): $(LIBFT) $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
 
 $(LIBFT):
 	$(MAKE) -C ..
-
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -I.. -I. -c $< -o $@
