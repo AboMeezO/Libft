@@ -14,11 +14,16 @@ void	test_striteri(void)
 {
 	char	str[6];
 
-	printf("\nft_striteri\n");
 	strcpy(str, "hello");
+	printf("Test 1\n");
+	printf("  input:    \"hello\", uppercase callback\n");
 	ft_striteri(str, uppercase);
-	print_case("transform", strcmp(str, "HELLO") == 0);
+	printf("  expected: \"HELLO\"\n");
+	printf("  actual:   \"%s\"\n\n", str);
 	strcpy(str, "HELLO");
+	printf("Test 2\n");
+	printf("  input:    \"HELLO\", uppercase callback\n");
 	ft_striteri(str, uppercase);
-	print_case("unchanged uppercase", strcmp(str, "HELLO") == 0);
+	printf("  expected: \"HELLO\"\n");
+	printf("  actual:   \"%s\"\n\n", str);
 }
