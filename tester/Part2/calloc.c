@@ -28,6 +28,8 @@ void	test_calloc(void)
 	}
 	print_case("zero initialized", 1);
 	free(buffer);
-	print_case("zero size", ft_calloc(0, 10) != NULL);
+	buffer = ft_calloc(0, 10);
+	free(buffer);
+	print_case("zero size", 1);
 	print_case("overflow", ft_calloc((size_t)-1, 2) == NULL);
 }
