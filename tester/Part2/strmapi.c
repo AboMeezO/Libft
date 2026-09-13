@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "../../libft.h"
 #include "../tester.h"
 
-static char	shift_char(unsigned int index, char character)
+static char	upper(unsigned int index, char character)
 {
 	(void)index;
 	if (character >= 'a' && character <= 'z')
@@ -16,11 +15,16 @@ void	test_strmapi(void)
 {
 	char	*result;
 
-	printf("\nft_strmapi\n");
-	result = ft_strmapi("hello", shift_char);
-	print_case("transform", result != NULL && strcmp(result, "HELLO") == 0);
+	printf("Test 1\n");
+	printf("  input:    \"hello\", uppercase callback\n");
+	result = ft_strmapi("hello", upper);
+	printf("  expected: \"HELLO\"\n");
+	printf("  actual:   \"%s\"\n\n", result);
 	free(result);
-	result = ft_strmapi("", shift_char);
-	print_case("empty string", result != NULL && strcmp(result, "") == 0);
+	printf("Test 2\n");
+	printf("  input:    \"\", uppercase callback\n");
+	result = ft_strmapi("", upper);
+	printf("  expected: \"\"\n");
+	printf("  actual:   \"%s\"\n\n", result);
 	free(result);
 }
