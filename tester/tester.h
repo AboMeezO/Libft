@@ -1,7 +1,7 @@
 #ifndef TESTER_H
 # define TESTER_H
 
-typedef int (*t_test)(void);
+typedef void (*t_test)(void);
 
 typedef struct s_test
 {
@@ -9,28 +9,29 @@ typedef struct s_test
 	t_test		run;
 } t_test_case;
 
-int	test_isalpha(void);
-int	test_isdigit(void);
-int	test_isalnum(void);
-int	test_isascii(void);
-int	test_isprint(void);
-int	test_toupper(void);
-int	test_tolower(void);
-int	test_strlen(void);
-int	test_strchr(void);
-int	test_strrchr(void);
-int	test_strncmp(void);
-int	test_memset(void);
-int	test_bzero(void);
-int	test_memcpy(void);
-int	test_memmove(void);
-int	test_memchr(void);
-int	test_memcmp(void);
-int	test_atoi(void);
-int	test_calloc(void);
-int	test_strlcpy(void);
-int	test_strlcat(void);
-int	test_strnstr(void);
-int	test_strdup(void);
+void	print_case(const char *name, int passed);
+void	test_isalpha(void);
+void	test_isdigit(void);
+void	test_isalnum(void);
+void	test_isascii(void);
+void	test_isprint(void);
+void	test_toupper(void);
+void	test_tolower(void);
+void	test_strlen(void);
+void	test_strchr(void);
+void	test_strrchr(void);
+void	test_strncmp(void);
+void	test_memset(void);
+void	test_bzero(void);
+void	test_memcpy(void);
+void	test_memmove(void);
+void	test_memchr(void);
+void	test_memcmp(void);
+void	test_atoi(void);
+void	test_calloc(void);
+void	test_strlcpy(void);
+void	test_strlcat(void);
+void	test_strnstr(void);
+void	test_strdup(void);
 
 #endif
