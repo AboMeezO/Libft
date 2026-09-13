@@ -9,10 +9,15 @@ void	test_lstsize(void)
 	t_list	b;
 	t_list	c;
 
-	printf("\nft_lstsize\n");
 	a.next = &b;
 	b.next = &c;
 	c.next = NULL;
-	print_case("three nodes", ft_lstsize(&a) == 3);
-	print_case("empty list", ft_lstsize(NULL) == 0);
+	printf("Test 1\n");
+	printf("  input:    list with 3 nodes\n");
+	printf("  expected: 3\n");
+	printf("  actual:   %d\n\n", ft_lstsize(&a));
+	printf("Test 2\n");
+	printf("  input:    NULL\n");
+	printf("  expected: 0\n");
+	printf("  actual:   %d\n\n", ft_lstsize(NULL));
 }
