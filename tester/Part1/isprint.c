@@ -4,10 +4,20 @@
 
 void	test_isprint(void)
 {
-	printf("\nft_isprint\n");
-	print_case("space", ft_isprint(32) == 1);
-	print_case("tilde", ft_isprint(126) == 1);
-	print_case("31", ft_isprint(31) == 0);
-	print_case("127", ft_isprint(127) == 0);
-	print_case("null", ft_isprint(0) == 0);
+	printf("Test 1\n");
+	printf("  input:    'A'\n");
+	printf("  expected: 1\n");
+	printf("  actual:   %d\n\n", ft_isprint('A'));
+	printf("Test 2\n");
+	printf("  input:    ' ' (space)\n");
+	printf("  expected: 1\n");
+	printf("  actual:   %d\n\n", ft_isprint(' '));
+	printf("Test 3\n");
+	printf("  input:    31\n");
+	printf("  expected: 0\n");
+	printf("  actual:   %d\n\n", ft_isprint(31));
+	printf("Test 4\n");
+	printf("  input:    127\n");
+	printf("  expected: 0\n");
+	printf("  actual:   %d\n\n", ft_isprint(127));
 }
