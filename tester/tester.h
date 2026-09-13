@@ -1,6 +1,14 @@
 #ifndef TESTER_H
 # define TESTER_H
 
+typedef int (*t_test)(void);
+
+typedef struct s_test
+{
+	const char	*name;
+	t_test		run;
+} t_test_case;
+
 int	test_isalpha(void);
 int	test_isdigit(void);
 int	test_isalnum(void);
