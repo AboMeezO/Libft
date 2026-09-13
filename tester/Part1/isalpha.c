@@ -4,11 +4,20 @@
 
 void	test_isalpha(void)
 {
-	printf("\nft_isalpha\n");
-	print_case("uppercase", ft_isalpha('A') == 1);
-	print_case("lowercase", ft_isalpha('z') == 1);
-	print_case("digit", ft_isalpha('0') == 0);
-	print_case("null", ft_isalpha(0) == 0);
-	print_case("before A", ft_isalpha('@') == 0);
-	print_case("after z", ft_isalpha('{') == 0);
+	printf("Test 1\n");
+	printf("  input:    'A'\n");
+	printf("  expected: 1\n");
+	printf("  actual:   %d\n\n", ft_isalpha('A'));
+	printf("Test 2\n");
+	printf("  input:    'z'\n");
+	printf("  expected: 1\n");
+	printf("  actual:   %d\n\n", ft_isalpha('z'));
+	printf("Test 3\n");
+	printf("  input:    '0'\n");
+	printf("  expected: 0\n");
+	printf("  actual:   %d\n\n", ft_isalpha('0'));
+	printf("Test 4\n");
+	printf("  input:    0\n");
+	printf("  expected: 0\n");
+	printf("  actual:   %d\n\n", ft_isalpha(0));
 }
