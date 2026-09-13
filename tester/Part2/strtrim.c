@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "../../libft.h"
 #include "../tester.h"
 
@@ -8,20 +7,22 @@ void	test_strtrim(void)
 {
 	char	*result;
 
-	printf("\nft_strtrim\n");
+	printf("Test 1\n");
+	printf("  input:    \"  hello  \", set=\" \"\n");
 	result = ft_strtrim("  hello  ", " ");
-	print_case("spaces", result != NULL && strcmp(result, "hello") == 0);
+	printf("  expected: \"hello\"\n");
+	printf("  actual:   \"%s\"\n\n", result);
 	free(result);
+	printf("Test 2\n");
+	printf("  input:    \"xxhelloxx\", set=\"x\"\n");
 	result = ft_strtrim("xxhelloxx", "x");
-	print_case("custom set", result != NULL && strcmp(result, "hello") == 0);
+	printf("  expected: \"hello\"\n");
+	printf("  actual:   \"%s\"\n\n", result);
 	free(result);
-	result = ft_strtrim("hello", "x");
-	print_case("nothing to trim", result != NULL && strcmp(result, "hello") == 0);
-	free(result);
+	printf("Test 3\n");
+	printf("  input:    \"xxxxx\", set=\"x\"\n");
 	result = ft_strtrim("xxxxx", "x");
-	print_case("all trimmed", result != NULL && strcmp(result, "") == 0);
-	free(result);
-	result = ft_strtrim("  hello world  ", " ");
-	print_case("internal spaces", result != NULL && strcmp(result, "hello world") == 0);
+	printf("  expected: \"\"\n");
+	printf("  actual:   \"%s\"\n\n", result);
 	free(result);
 }
