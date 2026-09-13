@@ -4,8 +4,10 @@
 
 void	test_putendl_fd(void)
 {
-	printf("\nft_putendl_fd\n");
-	printf("  expected: hello world + newline\n  output:   ");
-	ft_putendl_fd("hello world", 1);
-	print_case("manual output check", 1);
+	printf("Test 1\n");
+	printf("  input:    \"hello\", fd=1\n");
+	printf("  expected: hello + newline\n");
+	printf("  actual:   ");
+	ft_putendl_fd("hello", 1);
+	printf("\n");
 }
