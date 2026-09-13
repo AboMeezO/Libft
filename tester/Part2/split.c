@@ -8,6 +8,8 @@ static void	free_words(char **words)
 {
 	int	index;
 
+	if (words == NULL)
+		return ;
 	index = 0;
 	while (words[index])
 	{
