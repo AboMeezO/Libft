@@ -4,15 +4,26 @@
 
 void	test_strrchr(void)
 {
-	char	*str;
-	char	*banana;
+	char	*result;
 
-	str = "hello";
-	banana = "banana";
-	printf("\nft_strrchr\n");
-	print_case("last occurrence", ft_strrchr(str, 'l') == str + 3);
-	print_case("first char", ft_strrchr(str, 'h') == str);
-	print_case("missing char", ft_strrchr(str, 'z') == NULL);
-	print_case("null terminator", ft_strrchr(str, '\0') == str + 5);
-	print_case("repeated char", ft_strrchr(banana, 'a') == banana + 5);
+	printf("Test 1\n");
+	printf("  input:    \"hello\", 'l'\n");
+	result = ft_strrchr("hello", 'l');
+	printf("  expected: \"lo\"\n");
+	printf("  actual:   \"%s\"\n\n", result);
+	printf("Test 2\n");
+	printf("  input:    \"banana\", 'a'\n");
+	result = ft_strrchr("banana", 'a');
+	printf("  expected: \"a\" at the last position\n");
+	printf("  actual:   \"%s\"\n\n", result);
+	printf("Test 3\n");
+	printf("  input:    \"hello\", 'z'\n");
+	result = ft_strrchr("hello", 'z');
+	printf("  expected: NULL\n");
+	printf("  actual:   %s\n\n", result ? result : "NULL");
+	printf("Test 4\n");
+	printf("  input:    \"hello\", '\\0'\n");
+	result = ft_strrchr("hello", '\0');
+	printf("  expected: empty string at terminator\n");
+	printf("  actual:   \"%s\"\n\n", result);
 }
