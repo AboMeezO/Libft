@@ -10,20 +10,22 @@ static void	delete_content(void *content)
 
 void	test_lstclear(void)
 {
-	char	*first_content;
-	char	*second_content;
-	t_list	first;
-	t_list	second;
+	t_list	*first;
+	t_list	*second;
 	t_list	*list;
 
 	printf("\nft_lstclear\n");
-	first_content = malloc(2);
-	second_content = malloc(2);
-	first.content = first_content;
-	second.content = second_content;
-	first.next = &second;
-	second.next = NULL;
-	list = &first;
+	first = ft_lstnew(malloc(2));
+	second = ft_lstnew(malloc(2));
+	if (first == NULL || second == NULL)
+	{
+		free(first);
+		free(second);
+		print_case("allocation", 0);
+		return ;
+	}
+	first->next = second;
+	list = first;
 	ft_lstclear(&list, delete_content);
 	print_case("list becomes NULL", list == NULL);
 }
