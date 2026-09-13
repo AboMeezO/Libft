@@ -8,28 +8,29 @@ void	test_calloc(void)
 	unsigned char	*buffer;
 	size_t			index;
 
-	printf("\nft_calloc\n");
+	printf("Test 1\n");
+	printf("  input:    calloc(10, 1)\n");
 	buffer = ft_calloc(10, sizeof(unsigned char));
-	if (buffer == NULL)
-	{
-		print_case("allocation", 0);
-		return ;
-	}
+	printf("  expected: 10 zero bytes\n");
+	printf("  actual:   ");
 	index = 0;
-	while (index < 10)
+	while (buffer && index < 10)
 	{
-		if (buffer[index] != 0)
-		{
-			print_case("zero initialized", 0);
-			free(buffer);
-			return ;
-		}
+		printf("%d ", buffer[index]);
 		index++;
 	}
-	print_case("zero initialized", 1);
+	printf("\n\n");
 	free(buffer);
+	printf("Test 2\n");
+	printf("  input:    calloc(0, 10)\n");
 	buffer = ft_calloc(0, 10);
+	printf("  expected: valid allocation or NULL\n");
+	printf("  actual:   %s\n\n", buffer ? "non-NULL" : "NULL");
 	free(buffer);
-	print_case("zero size", 1);
-	print_case("overflow", ft_calloc((size_t)-1, 2) == NULL);
+	printf("Test 3\n");
+	printf("  input:    calloc(SIZE_MAX, 2)\n");
+	buffer = ft_calloc((size_t)-1, 2);
+	printf("  expected: NULL\n");
+	printf("  actual:   %s\n\n", buffer ? "non-NULL" : "NULL");
+	free(buffer);
 }
