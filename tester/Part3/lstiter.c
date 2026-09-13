@@ -12,13 +12,14 @@ void	test_lstiter(void)
 	t_list	first;
 	t_list	second;
 
-	printf("\nft_lstiter\n");
 	first.content = "hello ";
 	first.next = &second;
 	second.content = "world";
 	second.next = NULL;
-	printf("  expected: hello world\n  output:   ");
+	printf("Test 1\n");
+	printf("  input:    [\"hello \", \"world\"]\n");
+	printf("  expected: hello world\n");
+	printf("  actual:   ");
 	ft_lstiter(&first, print_content);
-	printf("\n");
-	print_case("manual output check", 1);
+	printf("\n\n");
 }
