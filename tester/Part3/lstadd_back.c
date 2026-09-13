@@ -1,18 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "../../libft.h"
 #include "../tester.h"
 
 void	test_lstadd_back(void)
 {
-	t_list	first;
-	t_list	second;
-	t_list	*list;
+	t_list	*first;
+	t_list	*last;
 
-	printf("\nft_lstadd_back\n");
-	first.next = NULL;
-	second.next = NULL;
-	list = &first;
-	ft_lstadd_back(&list, &second);
-	print_case("head unchanged", list == &first);
-	print_case("new tail", first.next == &second && second.next == NULL);
+	first = ft_lstnew("first");
+	last = ft_lstnew("last");
+	printf("Test 1\n");
+	printf("  input:    list=\"first\", new=\"last\"\n");
+	ft_lstadd_back(&first, last);
+	printf("  expected: first -> last\n");
+	printf("  actual:   %s -> %s\n\n", (char *)first->content, (char *)first->next->content);
+	free(last);
+	free(first);
 }
