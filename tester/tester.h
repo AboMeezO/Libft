@@ -8,5 +8,15 @@ int	test_isascii(void);
 int	test_isprint(void);
 int	test_toupper(void);
 int	test_tolower(void);
+int	test_strlen(void);
+int	test_strchr(void);
+int	test_strrchr(void);
+int	test_strncmp(void);
+int	test_memset(void);
+int	test_bzero(void);
+int	test_memcpy(void);
+int	test_memmove(void);
+int	test_memchr(void);
+int	test_memcmp(void);
 
 #endif
