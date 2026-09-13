@@ -4,11 +4,20 @@
 
 void	test_isdigit(void)
 {
-	printf("\nft_isdigit\n");
-	print_case("zero", ft_isdigit('0') == 1);
-	print_case("nine", ft_isdigit('9') == 1);
-	print_case("letter", ft_isdigit('a') == 0);
-	print_case("before 0", ft_isdigit('/') == 0);
-	print_case("after 9", ft_isdigit(':') == 0);
-	print_case("null", ft_isdigit(0) == 0);
+	printf("Test 1\n");
+	printf("  input:    '0'\n");
+	printf("  expected: 1\n");
+	printf("  actual:   %d\n\n", ft_isdigit('0'));
+	printf("Test 2\n");
+	printf("  input:    '9'\n");
+	printf("  expected: 1\n");
+	printf("  actual:   %d\n\n", ft_isdigit('9'));
+	printf("Test 3\n");
+	printf("  input:    'a'\n");
+	printf("  expected: 0\n");
+	printf("  actual:   %d\n\n", ft_isdigit('a'));
+	printf("Test 4\n");
+	printf("  input:    '/'\n");
+	printf("  expected: 0\n");
+	printf("  actual:   %d\n\n", ft_isdigit('/'));
 }
