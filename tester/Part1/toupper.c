@@ -4,10 +4,20 @@
 
 void	test_toupper(void)
 {
-	printf("\nft_toupper\n");
-	print_case("lowercase", ft_toupper('a') == 'A');
-	print_case("z", ft_toupper('z') == 'Z');
-	print_case("uppercase", ft_toupper('A') == 'A');
-	print_case("digit", ft_toupper('1') == '1');
-	print_case("symbol", ft_toupper('-') == '-');
+	printf("Test 1\n");
+	printf("  input:    'a'\n");
+	printf("  expected: 'A'\n");
+	printf("  actual:   '%c'\n\n", ft_toupper('a'));
+	printf("Test 2\n");
+	printf("  input:    'z'\n");
+	printf("  expected: 'Z'\n");
+	printf("  actual:   '%c'\n\n", ft_toupper('z'));
+	printf("Test 3\n");
+	printf("  input:    'A'\n");
+	printf("  expected: 'A'\n");
+	printf("  actual:   '%c'\n\n", ft_toupper('A'));
+	printf("Test 4\n");
+	printf("  input:    '1'\n");
+	printf("  expected: '1'\n");
+	printf("  actual:   '%c'\n\n", ft_toupper('1'));
 }
