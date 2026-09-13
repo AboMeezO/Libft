@@ -6,7 +6,7 @@ _This activity has been created as part of the 42 curriculum by mohammah._
 
 The library is divided into three parts:
 
-- **Part 1 — Libc functions**: Reimplementations of standard C functions (`isalpha`, `strlen`, `memcpy`, `strncmp`, etc.) with the `ft_` prefix.
+- **Part 1 — Libc functions**: Reimplementations of standard C functions (`isalpha`, `strlen`, `memcpy`, `strncmp`, etc.) with the `ft_`  prefix.
 - **Part 2 — Additional functions**: Utility functions not in libc or in a different form (`ft_substr`, `ft_split`, `ft_itoa`, `ft_strmapi`, etc.).
 - **Part 3 — Linked list functions**: Functions to manipulate a singly linked list using the `t_list` structure (`ft_lstnew`, `ft_lstadd_back`, `ft_lstmap`, etc.).
 
