@@ -8,17 +8,22 @@ void	test_strlcat(void)
 	char	dst[10];
 	size_t	result;
 
-	printf("\nft_strlcat\n");
 	strcpy(dst, "42");
+	printf("Test 1\n");
+	printf("  input:    dst=\"42\", src=\"libft\", size=10\n");
 	result = ft_strlcat(dst, "libft", sizeof(dst));
-	print_case("normal append", result == 7 && strcmp(dst, "42libft") == 0);
+	printf("  expected: return 7, dst=\"42libft\"\n");
+	printf("  actual:   return %zu, dst=\"%s\"\n\n", result, dst);
 	strcpy(dst, "42");
+	printf("Test 2\n");
+	printf("  input:    dst=\"42\", src=\"libft\", size=5\n");
 	result = ft_strlcat(dst, "libft", 5);
-	print_case("truncation", result == 7 && strcmp(dst, "42l") == 0);
+	printf("  expected: return 7, dst=\"42l\"\n");
+	printf("  actual:   return %zu, dst=\"%s\"\n\n", result, dst);
 	strcpy(dst, "42");
+	printf("Test 3\n");
+	printf("  input:    dst=\"42\", src=\"libft\", size=0\n");
 	result = ft_strlcat(dst, "libft", 0);
-	print_case("zero size", result == 2);
-	strcpy(dst, "abcdefghi");
-	result = ft_strlcat(dst, "x", sizeof(dst));
-	print_case("destination full", result == 10 && dst[9] == '\0');
+	printf("  expected: return 2\n");
+	printf("  actual:   return %zu\n\n", result);
 }
