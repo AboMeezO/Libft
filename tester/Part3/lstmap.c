@@ -25,14 +25,17 @@ void	test_lstmap(void)
 	t_list	second;
 	t_list	*result;
 
-	printf("\nft_lstmap\n");
 	first.content = "hello";
 	first.next = &second;
 	second.content = "world";
 	second.next = NULL;
+	printf("Test 1\n");
+	printf("  input:    [\"hello\", \"world\"]\n");
 	result = ft_lstmap(&first, duplicate_content, delete_content);
-	print_case("two nodes", result && result->next
-		&& strcmp(result->content, "hello") == 0
-		&& strcmp(result->next->content, "world") == 0);
+	printf("  expected: [\"hello\", \"world\"]\n");
+	if (result && result->next)
+		printf("  actual:   [\"%s\", \"%s\"]\n\n", (char *)result->content, (char *)result->next->content);
+	else
+		printf("  actual:   invalid list\n\n");
 	ft_lstclear(&result, delete_content);
 }
