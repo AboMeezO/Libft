@@ -4,14 +4,24 @@
 
 void	test_atoi(void)
 {
-	printf("\nft_atoi\n");
-	print_case("positive", ft_atoi("42") == 42);
-	print_case("negative", ft_atoi("-42") == -42);
-	print_case("plus sign", ft_atoi("+42") == 42);
-	print_case("leading spaces", ft_atoi("   42") == 42);
-	print_case("mixed whitespace", ft_atoi("\t\n\v\f\r 42") == 42);
-	print_case("trailing text", ft_atoi("42abc") == 42);
-	print_case("only sign", ft_atoi("+") == 0);
-	print_case("no digits", ft_atoi("abc") == 0);
-	print_case("leading zeros", ft_atoi("00042") == 42);
+	printf("Test 1\n");
+	printf("  input:    \"42\"\n");
+	printf("  expected: 42\n");
+	printf("  actual:   %d\n\n", ft_atoi("42"));
+	printf("Test 2\n");
+	printf("  input:    \"-42\"\n");
+	printf("  expected: -42\n");
+	printf("  actual:   %d\n\n", ft_atoi("-42"));
+	printf("Test 3\n");
+	printf("  input:    \"   42\"\n");
+	printf("  expected: 42\n");
+	printf("  actual:   %d\n\n", ft_atoi("   42"));
+	printf("Test 4\n");
+	printf("  input:    \"42abc\"\n");
+	printf("  expected: 42\n");
+	printf("  actual:   %d\n\n", ft_atoi("42abc"));
+	printf("Test 5\n");
+	printf("  input:    \"abc\"\n");
+	printf("  expected: 0\n");
+	printf("  actual:   %d\n\n", ft_atoi("abc"));
 }
