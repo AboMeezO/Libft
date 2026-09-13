@@ -5,13 +5,12 @@
 
 void	test_lstnew(void)
 {
-	char	*content;
 	t_list	*node;
 
-	printf("\nft_lstnew\n");
-	content = "hello";
-	node = ft_lstnew(content);
-	print_case("content", node && node->content == content);
-	print_case("next is NULL", node && node->next == NULL);
+	printf("Test 1\n");
+	printf("  input:    content=\"hello\"\n");
+	node = ft_lstnew("hello");
+	printf("  expected: content=\"hello\", next=NULL\n");
+	printf("  actual:   content=\"%s\", next=%s\n\n", (char *)node->content, node->next == NULL ? "NULL" : "not NULL");
 	free(node);
 }
