@@ -45,3 +45,7 @@ cc your_program.c -L. -lft
 
 - [man 3 libc functions](https://man7.org/linux/man-pages/man3/)
 - [BSD string functions](https://man7.org/linux/man-pages/man3/strlcpy.3.html)
+
+### AI Usage
+
+I used AI to explain the behavior of some functions in Parts 2 and 3, as the descriptions provided in the subject file were not detailed enough.
