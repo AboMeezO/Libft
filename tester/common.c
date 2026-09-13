@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include "tester.h"
 
-void	print_case(const char *name, int passed)
-{
-	printf("  %-24s %s\n", name, passed ? "OK" : "KO");
-}
-
 void	print_int_case(int number, const char *input, int expected, int actual)
 {
 	printf("Test %d\n", number);
