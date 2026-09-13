@@ -21,7 +21,7 @@ void	test_memcmp(void)
 	printf("  expected: 0\n");
 	printf("  actual:   %d\n\n", ft_memcmp("abc", "abd", 0));
 	printf("Test 5\n");
-	printf("  input:    \\"\\1\\2\\\", \\"\\1\\3\\\", 2\n");
+	printf("  input:    bytes [1, 2], [1, 3], 2\n");
 	printf("  expected: negative\n");
 	printf("  actual:   %d\n\n", ft_memcmp("\1\2", "\1\3", 2));
 }
