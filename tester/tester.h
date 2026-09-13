@@ -33,5 +33,25 @@ void	test_strlcpy(void);
 void	test_strlcat(void);
 void	test_strnstr(void);
 void	test_strdup(void);
+void	test_itoa(void);
+void	test_substr(void);
+void	test_strjoin(void);
+void	test_strtrim(void);
+void	test_split(void);
+void	test_strmapi(void);
+void	test_striteri(void);
+void	test_putchar_fd(void);
+void	test_putstr_fd(void);
+void	test_putendl_fd(void);
+void	test_putnbr_fd(void);
+void	test_lstnew(void);
+void	test_lstsize(void);
+void	test_lstlast(void);
+void	test_lstadd_front(void);
+void	test_lstadd_back(void);
+void	test_lstdelone(void);
+void	test_lstclear(void);
+void	test_lstiter(void);
+void	test_lstmap(void);
 
 #endif
