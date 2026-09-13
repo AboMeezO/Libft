@@ -4,10 +4,20 @@
 
 void	test_strlen(void)
 {
-	printf("\nft_strlen\n");
-	print_case("empty", ft_strlen("") == 0);
-	print_case("hello", ft_strlen("hello") == 5);
-	print_case("spaces", ft_strlen("hello world") == 11);
-	print_case("one char", ft_strlen("x") == 1);
-	print_case("newline", ft_strlen("a\nb") == 3);
+	printf("Test 1\n");
+	printf("  input:    \"\"\n");
+	printf("  expected: 0\n");
+	printf("  actual:   %zu\n\n", ft_strlen(""));
+	printf("Test 2\n");
+	printf("  input:    \"hello\"\n");
+	printf("  expected: 5\n");
+	printf("  actual:   %zu\n\n", ft_strlen("hello"));
+	printf("Test 3\n");
+	printf("  input:    \"hello world\"\n");
+	printf("  expected: 11\n");
+	printf("  actual:   %zu\n\n", ft_strlen("hello world"));
+	printf("Test 4\n");
+	printf("  input:    \"a\\nb\"\n");
+	printf("  expected: 3\n");
+	printf("  actual:   %zu\n\n", ft_strlen("a\nb"));
 }
