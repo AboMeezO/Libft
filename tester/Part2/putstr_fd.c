@@ -4,9 +4,16 @@
 
 void	test_putstr_fd(void)
 {
-	printf("\nft_putstr_fd\n");
-	printf("  expected: hello world\n  output:   ");
-	ft_putstr_fd("hello world", 1);
-	printf("\n");
-	print_case("manual output check", 1);
+	printf("Test 1\n");
+	printf("  input:    \"hello\", fd=1\n");
+	printf("  expected: hello\n");
+	printf("  actual:   ");
+	ft_putstr_fd("hello", 1);
+	printf("\n\n");
+	printf("Test 2\n");
+	printf("  input:    \"\", fd=1\n");
+	printf("  expected: empty output\n");
+	printf("  actual:   ");
+	ft_putstr_fd("", 1);
+	printf("\n\n");
 }
