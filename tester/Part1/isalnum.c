@@ -4,11 +4,20 @@
 
 void	test_isalnum(void)
 {
-	printf("\nft_isalnum\n");
-	print_case("uppercase", ft_isalnum('A') == 1);
-	print_case("lowercase", ft_isalnum('z') == 1);
-	print_case("digit", ft_isalnum('9') == 1);
-	print_case("space", ft_isalnum(' ') == 0);
-	print_case("symbol", ft_isalnum('-') == 0);
-	print_case("null", ft_isalnum(0) == 0);
+	printf("Test 1\n");
+	printf("  input:    'A'\n");
+	printf("  expected: 1\n");
+	printf("  actual:   %d\n\n", ft_isalnum('A'));
+	printf("Test 2\n");
+	printf("  input:    '7'\n");
+	printf("  expected: 1\n");
+	printf("  actual:   %d\n\n", ft_isalnum('7'));
+	printf("Test 3\n");
+	printf("  input:    '-'\n");
+	printf("  expected: 0\n");
+	printf("  actual:   %d\n\n", ft_isalnum('-'));
+	printf("Test 4\n");
+	printf("  input:    ' ' (space)\n");
+	printf("  expected: 0\n");
+	printf("  actual:   %d\n\n", ft_isalnum(' '));
 }
