@@ -20,6 +20,12 @@ static const t_test_case g_tests[] = {
 	{"ft_memmove", test_memmove},
 	{"ft_memchr", test_memchr},
 	{"ft_memcmp", test_memcmp},
+	{"ft_atoi", test_atoi},
+	{"ft_calloc", test_calloc},
+	{"ft_strlcpy", test_strlcpy},
+	{"ft_strlcat", test_strlcat},
+	{"ft_strnstr", test_strnstr},
+	{"ft_strdup", test_strdup},
 };
 
 static size_t	test_count(void)
