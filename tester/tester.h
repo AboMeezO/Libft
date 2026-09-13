@@ -10,6 +10,9 @@ typedef struct s_test
 } t_test_case;
 
 void	print_case(const char *name, int passed);
+void	print_int_case(int number, const char *input, int expected, int actual);
+void	print_str_case(int number, const char *input, const char *expected,
+	const char *actual);
 void	test_isalpha(void);
 void	test_isdigit(void);
 void	test_isalnum(void);
