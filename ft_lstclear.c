@@ -6,12 +6,12 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 20:27:46 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/12 14:27:27 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/14 08:31:39 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "ft_list.h"
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

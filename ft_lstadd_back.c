@@ -6,11 +6,11 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 19:57:25 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/12 14:30:36 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/14 08:27:26 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
+#include "libft.h"
 #include <stddef.h>
 
 void	ft_lstadd_back(t_list **lst, t_list *new)

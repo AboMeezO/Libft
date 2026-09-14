@@ -6,11 +6,11 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 20:14:03 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/07 14:32:40 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/14 08:32:21 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
+#include "libft.h"
 #include <stddef.h>
 
 t_list	*ft_lstlast(t_list *lst)

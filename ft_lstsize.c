@@ -6,11 +6,11 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 20:06:20 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/06 20:12:47 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/14 08:33:04 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
+#include "libft.h"
 #include <stddef.h>
 
 unsigned int	ft_lstsize(t_list *lst)

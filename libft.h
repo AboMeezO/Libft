@@ -6,7 +6,7 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 12:36:39 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/13 17:14:49 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/14 08:31:01 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 # define LIBFT_H
 
 # include <stddef.h>
-# include "ft_list.h"
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}
+}	t_list;
 
 // 7
 int				ft_isalpha(int c);

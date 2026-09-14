@@ -6,11 +6,11 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 20:39:26 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/12 14:30:56 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/14 08:32:07 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
+#include "libft.h"
 #include <stddef.h>
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
