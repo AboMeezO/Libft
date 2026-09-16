@@ -6,11 +6,10 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 01:24:15 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/12 14:21:56 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/16 12:26:17 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <stdlib.h>
 
 static int	is_in_set(char c, char const *set)
