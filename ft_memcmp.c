@@ -6,7 +6,7 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 23:23:02 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/07 13:24:37 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/17 22:45:00 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		index++;
 	if (index == n)
 		return (0);
-	if (str1[index] > str2[index])
-		return (1);
-	return (-1);
+	return (str1[index] - str2[index]);
 }
