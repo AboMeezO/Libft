@@ -6,7 +6,7 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 23:23:38 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/07 13:25:21 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/17 22:50:00 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		index++;
 	if (index == n || str1[index] == str2[index])
 		return (0);
-	if (str1[index] > str2[index])
-		return (1);
-	return (-1);
+	return (str1[index] - str2[index]);
 }
